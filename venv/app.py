@@ -23,9 +23,9 @@ def insert():
     if request.method == 'POST':
         name = request.form['name']
         email = request.form['email']
-        contact_number = request.form['contact_number']
+        contact = request.form['contact']
         address = request.form['address']
-        db.insert_details(name, email,contact_number,address)
+        db.insert_details(name, email,contact,address)
         details = db.get_details()
         print(details)
         for detail in details:
